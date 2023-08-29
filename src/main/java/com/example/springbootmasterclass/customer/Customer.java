@@ -21,7 +21,6 @@ public class Customer {
     public String getName() {
         return name;
     }
-
     @JsonIgnore
     public String getPassword() {
         return password;
