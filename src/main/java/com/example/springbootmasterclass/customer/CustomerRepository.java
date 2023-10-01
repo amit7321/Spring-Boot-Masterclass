@@ -9,8 +9,8 @@ public class CustomerRepository implements CustomerRepo {
     @Override
     public List<Customer> getCustomers() {
         return Arrays.asList(
-                new Customer(1L, "James Bond"),
-                new Customer(2L, "Amit Hasan")
+                new Customer(1L, "James Bond", "amit@gmail.com"),
+                new Customer(2L, "Amit Hasan", "amit@gmail.com")
         );
     }
 }
