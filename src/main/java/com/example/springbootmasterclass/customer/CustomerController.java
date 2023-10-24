@@ -1,6 +1,8 @@
 package com.example.springbootmasterclass.customer;
 
 import com.example.springbootmasterclass.SpringBootMasterclassApplication;
+import com.example.springbootmasterclass.exception.ApiExceptionHandler;
+import com.example.springbootmasterclass.exception.ApiRequestException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +27,13 @@ public class CustomerController {
     @GetMapping("{customerId}")
     Customer getCustomer(@PathVariable("customerId") Long id) {
         return customerService.getCustomer(id);
+    }
+
+    @GetMapping("{customerId}/exception")
+    Customer getCustomerException(@PathVariable("customerId") Long id) {
+        throw new ApiRequestException(
+                "ApiRequestException customer Id" + id
+        );
     }
 
     @PostMapping

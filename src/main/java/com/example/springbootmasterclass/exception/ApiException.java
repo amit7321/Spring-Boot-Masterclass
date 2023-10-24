@@ -34,7 +34,7 @@ public class ApiException {
     }
 
     @Override
-    public String toString() {
+    public String  toString() {
         return "ApiException{" +
                 "message='" + message + '\'' +
                 ", throwable=" + throwable +
